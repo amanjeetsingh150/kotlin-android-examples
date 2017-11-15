@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ViewPager</string>
+
+    <string name="page_one_fragment">Page 1</string>
+    <string name="page_two_fragment">Page 2</string>
+</resources>
