@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RuntimePermissions</string>
+    <string name="call">CALL</string>
+</resources>
