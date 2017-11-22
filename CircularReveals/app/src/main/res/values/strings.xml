@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CircularReveals</string>
+    <string name="text_main">Hello from MainActvity!!</string>
+    <string name="button_one_text">Button one</string>
+    <string name="button_two_text">Button Two</string>
+</resources>
