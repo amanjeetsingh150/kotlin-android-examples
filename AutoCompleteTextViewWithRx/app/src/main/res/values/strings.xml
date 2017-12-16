@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AutoCompleteTextViewWithRx</string>
+    <string name="title_activity_maps">AutoCompleteMap</string>
+</resources>
