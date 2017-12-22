@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FormsWithRx</string>
+    <string name="login_page">Login Page</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button_text">Login</string>
+</resources>
