@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">UsingSpringAnimation</string>
+    <string name="physics_animations">Physics Animation</string>
+</resources>
