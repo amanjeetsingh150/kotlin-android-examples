@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">KotlinCoroutines</string>
+    <string name="send_button_text">Send Mail from DB</string>
+    <string name="search_movie_hint">Search Movie</string>
+    <string name="msg_success">Message successfully sent: %1$s</string>
+    <string name="email_id_string">Email: %1$s</string>
+    <string name="email_msg">Message: %1$s</string>
+</resources>
