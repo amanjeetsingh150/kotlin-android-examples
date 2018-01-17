@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        tools:text="Amanjeet Singh" />
+
+
+    <TextView
+        android:id="@+id/status_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        tools:text="I am in the air." />
+
+</LinearLayout>
