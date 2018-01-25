@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SpekExample</string>
+    <string name="email_hint_text">Email</string>
+    <string name="validate_button">Validate</string>
+</resources>
