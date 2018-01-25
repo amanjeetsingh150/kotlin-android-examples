@@ -3,11 +3,12 @@ Spek is a testing framework which can make your testing life easier. It makes th
 <UL>
 <LI>Given: This helps you to establish the context of your test</LI>
 <LI>On:Execute the Action, ACT</LI>
-<LI>It:Validate results,Asserts finally</LI>
+<LI>It:Validate results, Asserts finally</LI>
 </UL>
 <br>
 For more see the documentation: http://spekframework.org/docs/latest/
 <br>
-Screenshots:
+<br>
+# Screenshots
 <br><br>
 <img src="img.png"/>
