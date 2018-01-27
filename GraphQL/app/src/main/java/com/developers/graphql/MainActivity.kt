@@ -12,6 +12,7 @@ import android.view.View
 import android.widget.TextView
 import com.google.gson.Gson
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.repo_layout.*
@@ -19,6 +20,9 @@ import java.util.logging.Logger
 
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var gitApi: ApiInterface
+    private lateinit var disposable:Disposable
 
     companion object {
         val Log = Logger.getLogger(MainActivity::class.java.name)
@@ -68,8 +72,8 @@ class MainActivity : AppCompatActivity() {
                 progress_bar.visibility = View.GONE
             } else {
 
-                val gitApi = ApiInterface.create()
-                gitApi.getInfo(queryBody)
+                gitApi = ApiInterface.create()
+                disposable = gitApi.getInfo(queryBody)
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe({ result ->
@@ -136,5 +140,12 @@ class MainActivity : AppCompatActivity() {
                         })
             }
         })
+    }
+
+    override fun onStop() {
+        super.onStop()
+        if(!(disposable.isDisposed)){
+            disposable.dispose()
+        }
     }
 }

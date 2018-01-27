@@ -14,6 +14,6 @@ query {
 </pre>
 The result of the above query is shown below:
 
-Screenshots:
+<b>Screenshots:</b>
 <br><br>
 <img src="graphql.gif"/>
