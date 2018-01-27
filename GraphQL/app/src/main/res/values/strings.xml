@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GraphQL</string>
+    <string name="owner_name_hint">Owner Name</string>
+    <string name="repository_name">Repository Name</string>
+    <string name="button_text">Find</string>
+    <string name="name_text">Name:</string>
+    <string name="error_blank">The fields cannot be blank.</string>
+    <string name="fork_text">Forks:</string>
+    <string name="description_text">Description:</string>
+    <string name="url_text">URL:</string>
+</resources>

@@ -9,6 +9,6 @@ Spek is a testing framework which can make your testing life easier. It makes th
 For more see the documentation: http://spekframework.org/docs/latest/
 <br>
 <br>
-# Screenshots
+<b>Screenshots</b>
 <br><br>
 <img src="img.png"/>
