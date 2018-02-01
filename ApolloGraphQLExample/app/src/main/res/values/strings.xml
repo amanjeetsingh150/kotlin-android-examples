@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ApolloGraphQLExample</string>
+    <string name="repository_name">Repository Name</string>
+    <string name="owner_name_hint">Owner Name</string>
+    <string name="button_text">Search</string>
+    <string name="name_text">Name: %1$s</string>
+    <string name="description_text">Description: %1$s</string>
+    <string name="fork_count_text">Fork Count: %1$s</string>
+    <string name="url_count_text">URL: %1$s</string>
+</resources>
