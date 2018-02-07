@@ -11,4 +11,4 @@ Advantages to implement the MVP pattern in your projects:
 </UL>
 <br><br>
 <b>Screenshots:</b>
-<img src="MVP.gif"/>
+<img src="mvp.gif"/>
