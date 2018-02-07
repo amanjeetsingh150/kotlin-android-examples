@@ -2,6 +2,7 @@ package com.developers.mvpsample.ui.main
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.support.design.widget.Snackbar
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
@@ -12,7 +13,10 @@ import com.developers.mvpsample.data.Result
 import com.developers.mvpsample.di.component.DaggerActivityComponent
 import com.developers.mvpsample.di.module.ActivityModule
 import com.developers.mvpsample.ui.adapter.MovieAdapter
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.logging.Logger
 import javax.inject.Inject
 
 
@@ -20,6 +24,14 @@ class MainActivity : AppCompatActivity(), MainView {
 
     @Inject
     lateinit var mainPresenter: MainMvpPresenter<MainView>
+    var resultJSON: String? = null
+    private val RESULT = "resultJson"
+    private val gson = Gson()
+
+
+    companion object {
+        val log = Logger.getLogger(MainActivity::class.java.name)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +43,32 @@ class MainActivity : AppCompatActivity(), MainView {
         activityComponent.inject(this)
         mainPresenter.attachView(this)
         setListeners()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+        outState?.putString(RESULT, resultJSON)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+        val result = savedInstanceState?.getString(RESULT)
+        val movieList = gson.fromJson<List<Result>>(result, object : TypeToken<List<Result>>() {
+        }.type)
+        if (movieList != null) {
+            setupRecyclerView(movieList)
+            resultJSON = gson.toJson(movieList)
+        }
+    }
+
+    private fun setupRecyclerView(movieResult: List<Result>) {
+        val linearLayoutManager = LinearLayoutManager(applicationContext)
+        linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
+        val movieAdapter = MovieAdapter(movieResult, applicationContext)
+        with(movie_recycler_view) {
+            layoutManager = linearLayoutManager
+            adapter = movieAdapter
+        }
     }
 
     private fun setListeners() {
@@ -50,6 +88,7 @@ class MainActivity : AppCompatActivity(), MainView {
     }
 
     override fun showData(movieResult: List<Result>) {
+        resultJSON = gson.toJson(movieResult)
         val linearLayoutManager = LinearLayoutManager(applicationContext)
         linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
         val movieAdapter = MovieAdapter(movieResult, applicationContext)
