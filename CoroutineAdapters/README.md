@@ -15,4 +15,4 @@ compile 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-experimental-adapt
 <br><br>
 Screenshots:
 <br><br>
-<img src="realm.gif"/>
+<img src="coroutineAdapter.gif"/>
