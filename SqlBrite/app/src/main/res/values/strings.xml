@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SqlBrite</string>
+    <string name="repository_name_hint">Repository Name</string>
+    <string name="owner_name_hint">Owner Name</string>
+    <string name="insert_text">INSERT</string>
+    <string name="owner_name_textview">Owner Name:</string>
+    <string name="repo_name_textview">Repository Name:</string>
+</resources>
