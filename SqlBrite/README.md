@@ -6,9 +6,9 @@ The sqliteOpenHelper can be wrapped in following way:
 val db = sqlBrite.wrapDatabaseHelper(helper, Schedulers.io())
 </pre>
 After wrapping we can react to the queries to the database.
-<br>
+<br><br>
 Documentation:https://github.com/square/sqlbrite
-<br> 
+<br><br>
 <b>Screenshots:</b>
 <br><br>
 <img src="sqlbrite.gif"/>
