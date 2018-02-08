@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RealmDB</string>
+    <string name="pokemon_name_hint">Pokemon Name</string>
+    <string name="pokemon_type_hint">Pokemon Type:</string>
+    <string name="insert_button_text">Insert in DB</string>
+    <string name="view_all_text">View all</string>
+    <string name="delete_all_text">Delete All</string>
+    <string name="no_value_string">No value till now.</string>
+    <string name="deleted_all">Deleted all the Pokemons.</string>
+
+
+</resources>
