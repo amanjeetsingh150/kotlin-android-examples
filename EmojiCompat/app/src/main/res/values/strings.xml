@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EmojiCompat</string>
+    <string name="edit_text_hint">Your text with Emojis here</string>
+    <string name="ok_button_text">Emojify</string>
+</resources>
