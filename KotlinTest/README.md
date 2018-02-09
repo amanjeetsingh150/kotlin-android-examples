@@ -9,7 +9,7 @@ init
       emailValidator.isValidEmail(validMail) shouldBe true
   }
 }
-<pre>
+</pre>
 <br><br>
 <b>Screenshot:</b>
 <img src="validMail.png"/>
