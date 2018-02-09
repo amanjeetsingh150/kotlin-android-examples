@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MVVMSample</string>
+    <string name="search_hint">Search Movie</string>
+    <string name="search_text">Search</string>
+</resources>
