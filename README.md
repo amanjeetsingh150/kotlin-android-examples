@@ -46,3 +46,15 @@ This repository contains all the example apps demonstrating features/integration
 <li><a href="/ViewModelAndroidArch">ViewModelAndroidArch</a> <a href="https://kinolien.github.com/gitzip/?download=https://github.com/amanjeetsingh150/kotlin-android-examples/tree/master/ViewModelAndroidArch"><img src="ic_download.png" alt="download" style="max-width:100%;"></a></li>
 <li><a href="/ViewPager">ViewPager</a> <a href="https://kinolien.github.com/gitzip/?download=https://github.com/amanjeetsingh150/kotlin-android-examples/tree/master/ViewPager"><img src="ic_download.png" alt="download" style="max-width:100%;"></a></li>
 </ol>
+<br><br>
+<h2>Pull Requests</h2>
+I encourage all the developers out there to contribute to the repository and help me to expand it. To contribute just think up of an example which could be a feature or some demo to how to use a library. Develop the demo and create a pull request and you are in.
+<br><br>
+<h2>Created By:</h2>
+<a href="https://github.com/amanjeetsingh150/">Amanjeet Singh</a>
+Twitter: <a href="https://twitter.com/droid_singh">@droid_singh</a>
+<br><br>
+<h3>Inspired by</h3>
+I made this repository after inspiration from this wonderful work by <a href="https://github.com/nisrulz/">nisrulz</a>. You can find his repo on following link:
+<br>
+https://github.com/nisrulz/android-examples
