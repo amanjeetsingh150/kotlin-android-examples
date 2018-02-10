@@ -51,11 +51,11 @@ This repository contains all the example apps demonstrating features/integration
 I encourage all the developers out there to contribute to the repository and help me to expand it. To contribute just think up of an example which could be a feature or some demo to how to use a library. Develop the demo and create a pull request and you are in.
 <br><br>
 <h2>Created By:</h2>
-<a href="https://github.com/amanjeetsingh150/">Amanjeet Singh</a>
+Delveloper:<a href="https://github.com/amanjeetsingh150/">Amanjeet Singh</a>
 <br>
 Twitter: <a href="https://twitter.com/droid_singh">@droid_singh</a>
 <br><br>
 <h3>Inspired by</h3>
 I made this repository after inspiration from this wonderful work by <a href="https://github.com/nisrulz/">nisrulz</a>. You can find his repo on following link:
-<br>
-https://github.com/nisrulz/android-examples
+<br><br>
+<b>Link: </b>https://github.com/nisrulz/android-examples
