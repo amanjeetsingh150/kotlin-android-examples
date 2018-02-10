@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ObjectAnimator</string>
+    <string name="start_animating_text">Start Animating</string>
+</resources>
