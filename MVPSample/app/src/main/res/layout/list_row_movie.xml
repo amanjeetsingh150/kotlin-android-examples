@@ -30,7 +30,7 @@
             android:id="@+id/movie_title_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp"
             android:textStyle="bold|italic"
             android:fontFamily="sans-serif"
