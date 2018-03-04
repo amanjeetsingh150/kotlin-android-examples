@@ -45,6 +45,7 @@ This repository contains all the example apps demonstrating features/integration
 <li><a href="/ValueAnimator">ValueAnimator</a> <a href="https://kinolien.github.com/gitzip/?download=https://github.com/amanjeetsingh150/kotlin-android-examples/tree/master/ValueAnimator"><img src="ic_download.png" alt="download" style="max-width:100%;"></a></li>
 <li><a href="/ViewModelAndroidArch">ViewModelAndroidArch</a> <a href="https://kinolien.github.com/gitzip/?download=https://github.com/amanjeetsingh150/kotlin-android-examples/tree/master/ViewModelAndroidArch"><img src="ic_download.png" alt="download" style="max-width:100%;"></a></li>
 <li><a href="/ViewPager">ViewPager</a> <a href="https://kinolien.github.com/gitzip/?download=https://github.com/amanjeetsingh150/kotlin-android-examples/tree/master/ViewPager"><img src="ic_download.png" alt="download" style="max-width:100%;"></a></li>
+<li><a href="/BottomNavigationView">BottomNavigationView</a> <a href="https://kinolien.github.com/gitzip/?download=https://github.com/amanjeetsingh150/kotlin-android-examples/tree/master/BottomNavigationView"><img src="ic_download.png" alt="download" style="max-width:100%;"></a></li>
 </ol>
 <br><br>
 <h2>Pull Requests</h2>
