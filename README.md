@@ -55,6 +55,10 @@ I encourage all the developers out there to contribute to the repository and hel
 <b>Developer: </b><a href="https://github.com/amanjeetsingh150/">Amanjeet Singh</a>
 <br><br>
 <b>Twitter: </b><a href="https://twitter.com/droid_singh">@droid_singh</a>
+<blockquote>
+If you found this code demo helpful or you learned something today and want to thank me, consider buying me a cup of :coffee: at
+<a href="https://www.paypal.me/amanjeetsingh150">PayPal</a>
+</blockquote>
 <br><br>
 <h3>Inspired by</h3>
 I made this repository after inspiration from this wonderful work by <a href="https://github.com/nisrulz/">nisrulz</a>. You can find his repo on following link:
