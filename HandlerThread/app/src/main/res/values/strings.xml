@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HandlerThread</string>
+    <string name="food_text">Food name: %1$s</string>
+    <string name="price_text">Converted Price: %1$s ₹</string>
+</resources>
