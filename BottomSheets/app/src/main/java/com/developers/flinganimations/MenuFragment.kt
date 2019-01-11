@@ -20,7 +20,7 @@ class MenuFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val bundle = arguments
-        val string = bundle.getString("key")
+        val string = bundle?.getString("key")
         when (string) {
             "0" -> {
                 pos = "0"
@@ -34,7 +34,7 @@ class MenuFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val v = inflater!!.inflate(R.layout.fragment_menu, container, false)
@@ -44,7 +44,7 @@ class MenuFragment : Fragment() {
                         R.drawable.ic_local_grocery_store_grey_700_24dp,
                         R.drawable.ic_local_atm_grey_700_24dp,
                         R.drawable.ic_local_pharmacy_grey_700_24dp)
-                val menuAdapter = MenuAdapter(activity, imageList)
+                val menuAdapter = MenuAdapter(activity!!.applicationContext, imageList)
                 val grid = GridLayoutManager(activity, 2)
                 v.recycler_view.layoutManager = grid
                 v.recycler_view.adapter = menuAdapter

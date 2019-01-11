@@ -1,18 +1,13 @@
 package com.developers.flinganimations
 
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.animation.DynamicAnimation
-import android.support.animation.FlingAnimation
-import android.support.design.widget.TabLayout
-import kotlinx.android.synthetic.main.bottom_sheet.*
-import kotlinx.android.synthetic.main.content_main.*
 import android.support.design.widget.BottomSheetBehavior
-import android.view.MotionEvent
+import android.support.design.widget.TabLayout
+import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.view.GestureDetector
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.bottom_sheet.*
 import java.util.logging.Logger
 
 
