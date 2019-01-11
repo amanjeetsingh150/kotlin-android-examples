@@ -1,0 +1,18 @@
+ext{
+
+kotlin_version = "1.3.11"
+constraintLayoutVersion = "1.1.3"
+compileSdkVer = 28
+targetSdkVer = 28
+androidPluginVer = "3.2.1"
+buildToolsVer = '28.0.0'
+minSdkVer = 19
+
+
+junitVer = "4.12"
+androidTestRunnerVer = "1.0.2"
+espressoCoreVersion = "3.0.2"
+
+apolloPluginVersion = "0.3.2"
+ankoVersion = "0.10.5"
+}
