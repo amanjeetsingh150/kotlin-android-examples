@@ -1,8 +1,8 @@
 package com.developers.autocompletetextviewwithrx
 
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
@@ -12,7 +12,6 @@ import android.widget.Toast
 import com.developers.autocompletetextviewwithrx.model.AutoCompleteResult
 import com.developers.autocompletetextviewwithrx.model.PlaceModel
 import com.developers.autocompletetextviewwithrx.utils.ApiInterface
-
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -20,23 +19,24 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.jakewharton.rxbinding2.widget.textChangeEvents
-import com.jakewharton.rxbinding2.widget.textChanges
 import io.reactivex.Observable
+import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_maps.*
 import java.util.concurrent.TimeUnit
-import io.reactivex.android.schedulers.AndroidSchedulers
 
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
     private lateinit var composite: CompositeDisposable
+    private lateinit var apiDisposable: Disposable
     private lateinit var apiCall: ApiInterface
     private lateinit var arrayAdapter: ArrayAdapter<String>
     val placeList: ArrayList<PlaceModel> = arrayListOf()
-    val placeNameList: ArrayList<String> = arrayListOf()
+    private val placeNameList: ArrayList<String> = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,14 +54,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         //Extension function for autocomplete from RxBindings
         val autocompleteResponseObservable: Observable<AutoCompleteResult> = autoCompleteTextView.textChangeEvents()
                 .debounce(500, TimeUnit.MILLISECONDS)
-                .map({ textViewTextChangeEvent -> textViewTextChangeEvent.text().toString() })
-                .filter({ s -> s.length >= 2 })
+                .map { textViewTextChangeEvent -> textViewTextChangeEvent.text().toString() }
+                .filter { s -> s.length >= 2 }
                 .observeOn(Schedulers.io())
                 //"establishment" instructs the Place Autocomplete service to return only business results
-                .switchMap({ s ->
+                .switchMap { s ->
                     apiCall.getResults(s, "establishment",
                             BuildConfig.PLACE_KEY)
-                })
+                }
                 .observeOn(AndroidSchedulers.mainThread())
                 .retry()
 
@@ -93,7 +93,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     private fun makeCallForDetails(placeId: String) {
-        apiCall.getDetails(placeId, BuildConfig.PLACE_KEY)
+        apiDisposable = apiCall.getDetails(placeId, BuildConfig.PLACE_KEY)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ result ->
@@ -127,6 +127,4 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     fun Context.toast(message: CharSequence, duration: Int = Toast.LENGTH_SHORT) {
         Toast.makeText(this, message, duration).show()
     }
-
-
 }
