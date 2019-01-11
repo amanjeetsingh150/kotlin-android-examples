@@ -8,11 +8,20 @@ androidPluginVer = "3.2.1"
 buildToolsVer = '28.0.0'
 minSdkVer = 19
 
-
+//Test dependencies
 junitVer = "4.12"
 androidTestRunnerVer = "1.0.2"
 espressoCoreVersion = "3.0.2"
 
+//Rx
+rxJavaAndroidVersion = "2.1.0"
+rxJavaVersion = "2.2.2"
+rxJavaRetrofitAdapterVer = "2.3.0"
+rxBindingVer = "2.1.1"
+
 apolloPluginVersion = "0.3.2"
 ankoVersion = "0.10.5"
+gmsPlayVersionMaps = "16.0.0"
+retrofitVersion = "2.3.0"
+retrofitConverterGsonVer = "2.3.0"
 }
