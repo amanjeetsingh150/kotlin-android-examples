@@ -11,11 +11,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        button_broadcast.setOnClickListener({
+        button_broadcast.setOnClickListener{
             val intent = Intent("github.amanjeetsingh150.MY_ACTION")
             intent.putExtra("data", "Broadcast Message!!")
             sendBroadcast(intent)
-        })
+        }
     }
 
 
