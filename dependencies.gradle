@@ -19,6 +19,7 @@ rxJavaAndroidVersion = "2.1.0"
 rxJavaVersion = "2.2.2"
 rxJavaRetrofitAdapterVer = "2.3.0"
 rxBindingVer = "2.1.1"
+rxAdapterRetrofitVer = "2.3.0" 
 
 apolloPluginVersion = "0.3.2"
 ankoVersion = "0.10.5"

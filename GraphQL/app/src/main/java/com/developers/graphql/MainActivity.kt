@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button_find.setOnClickListener({
+        button_find.setOnClickListener {
             progress_bar.visibility = View.VISIBLE
             val repoName = repo_name_edittext.text
             val ownerName = owner_name_edittext.text
@@ -139,7 +139,7 @@ class MainActivity : AppCompatActivity() {
                             e.printStackTrace()
                         })
             }
-        })
+        }
     }
 
     override fun onStop() {
