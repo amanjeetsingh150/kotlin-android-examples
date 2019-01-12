@@ -1,5 +1,6 @@
 package com.developers.contentproviders
 
+
 import android.content.ContentValues
 import android.database.Cursor
 import android.support.v7.app.AppCompatActivity
@@ -16,7 +17,7 @@ import java.util.logging.Logger
 
 class MainActivity : AppCompatActivity(), LoaderManager.LoaderCallbacks<Cursor> {
 
-    lateinit var mAdapter: VillainAdapter
+    private lateinit var mAdapter: VillainAdapter
 
     companion object {
         const val LOADER_VILLAIN = 1
@@ -51,16 +52,16 @@ class MainActivity : AppCompatActivity(), LoaderManager.LoaderCallbacks<Cursor> 
         }
     }
 
-    override fun onLoaderReset(loader: Loader<Cursor>?) {
-        when (loader?.id) {
+    override fun onLoaderReset(loader: Loader<Cursor>) {
+        when (loader.id) {
             LOADER_VILLAIN -> {
                 log.info("In RESET")
             }
         }
     }
 
-    override fun onLoadFinished(loader: Loader<Cursor>?, data: Cursor?) {
-        when (loader?.id) {
+    override fun onLoadFinished(loader: Loader<Cursor>, data: Cursor?) {
+        when (loader.id) {
             LOADER_VILLAIN -> {
                 mAdapter = VillainAdapter(applicationContext)
                 recycler_view.adapter = mAdapter

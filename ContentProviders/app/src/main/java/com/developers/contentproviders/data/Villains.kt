@@ -27,8 +27,8 @@ data class Villains(
         const val TABLE_NAME = "villains"
         const val VILLAIN_NAME = "villain_name"
         const val VILLAIN_SERIES = "series"
-        val villainsName = listOf<String>("Joker", "DeathStroke", "Reverse Flash", "Lex Luthor", "Harley Quinn")
-        val villainsSeries = listOf<String>("Batman", "Arrow", "Flash", "Superman", "Suicide Squad")
+        val villainsName = listOf("Joker", "DeathStroke", "Reverse Flash", "Lex Luthor", "Harley Quinn")
+        val villainsSeries = listOf("Batman", "Arrow", "Flash", "Superman", "Suicide Squad")
         var villain: Villains = Villains("", "")
         fun fromContentValues(vals: ContentValues): Villains {
             if (vals.containsKey(COLUMN_ID)) {
