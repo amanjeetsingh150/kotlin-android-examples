@@ -1,15 +1,14 @@
 package com.developers.formswithrx
 
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import com.jakewharton.rxbinding2.widget.textChangeEvents
 import io.reactivex.Observable
 import io.reactivex.disposables.Disposable
 import io.reactivex.functions.BiFunction
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,24 +24,22 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
 
         val usernameObservable = username_editText.textChangeEvents()
-                .map({ textViewTextChangeEvent ->
+                .map { textViewTextChangeEvent ->
                     textViewTextChangeEvent.text().toString()
-                })
+                }
         val passwordObservable = password_editText.textChangeEvents()
-                .map({ textViewTextChangeEvent ->
+                .map { textViewTextChangeEvent ->
                     textViewTextChangeEvent.text().toString()
-                })
+                }
 
         d = Observable.zip(usernameObservable, passwordObservable
-                , object : BiFunction<String, String, Boolean> {
-            override fun apply(username: String, password: String): Boolean {
-                if (conditionForUserName(username) && conditionForPassword(password)) {
-                    conditionMet = true
-                    return conditionMet
-                } else {
-                    conditionMet=false
-                    return conditionMet
-                }
+                , BiFunction<String, String, Boolean> { username, password ->
+            if (conditionForUserName(username) && conditionForPassword(password)) {
+                conditionMet = true
+                conditionMet
+            } else {
+                conditionMet=false
+                conditionMet
             }
         }).subscribe({
             if (conditionMet) {
@@ -56,9 +53,9 @@ class MainActivity : AppCompatActivity() {
             }
         }, { e -> e.printStackTrace() })
 
-        login_button.setOnClickListener({
+        login_button.setOnClickListener {
             toast("Process your Login")
-        })
+        }
     }
 
     fun Context.toast(msg: CharSequence) {
