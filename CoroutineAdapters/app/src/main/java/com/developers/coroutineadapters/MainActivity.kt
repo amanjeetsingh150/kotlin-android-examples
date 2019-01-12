@@ -4,15 +4,13 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
-import com.developers.coroutineadapters.model.Cast
 import com.developers.coroutineadapters.model.MovieResult
 import com.developers.coroutineadapters.model.Result
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.experimental.CommonPool
-import kotlinx.coroutines.experimental.Deferred
-import kotlinx.coroutines.experimental.android.UI
-
-import kotlinx.coroutines.experimental.launch
+import kotlinx.coroutines.Deferred
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.util.logging.Logger
 
 class MainActivity : AppCompatActivity() {
@@ -29,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         apiInterface = ApiInterface.create()
-        launch(CommonPool) {
+        GlobalScope.launch(Dispatchers.IO) {
             getMovieCrew(getMovies().await().results)
         }
 
@@ -48,7 +46,7 @@ class MainActivity : AppCompatActivity() {
                     BuildConfig.MOVIE_KEY).await().cast[0].name + " of " + result.title)
         }
         log.info(" " + castList.size)
-        launch(UI) {
+        GlobalScope.launch(Dispatchers.Main) {
             log.info("Sizes " + nameList.size + " " + castList.size)
             val linearLayoutManager = LinearLayoutManager(applicationContext)
             linearLayoutManager.orientation = LinearLayoutManager.VERTICAL

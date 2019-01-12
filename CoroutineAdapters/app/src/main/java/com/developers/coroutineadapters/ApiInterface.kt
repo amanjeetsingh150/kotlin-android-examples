@@ -3,8 +3,8 @@ package com.developers.coroutineadapters
 import com.developers.coroutineadapters.model.CrewResult
 import com.developers.coroutineadapters.model.MovieResult
 import com.developers.coroutineadapters.model.VideoResult
-import com.jakewharton.retrofit2.adapter.kotlin.coroutines.experimental.CoroutineCallAdapterFactory
-import kotlinx.coroutines.experimental.Deferred
+import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
+import kotlinx.coroutines.Deferred
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET

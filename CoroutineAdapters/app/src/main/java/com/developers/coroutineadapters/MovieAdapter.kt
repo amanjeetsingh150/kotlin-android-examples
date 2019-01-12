@@ -9,11 +9,12 @@ import kotlinx.android.synthetic.main.list_row.view.*
 /**
  * Created by Amanjeet Singh on 9/2/18.
  */
-class MovieAdapter(val movieNameList: MutableList<String>, val castList: MutableList<String>)
+class MovieAdapter(private val movieNameList: MutableList<String>,
+                   private val castList: MutableList<String>)
     : RecyclerView.Adapter<MovieAdapter.MyViewHolder>() {
 
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent?.context).inflate(R.layout.list_row, parent,
                 false)
         return MyViewHolder(view)
@@ -23,7 +24,7 @@ class MovieAdapter(val movieNameList: MutableList<String>, val castList: Mutable
         return movieNameList.size
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder?, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder?.bindItems(movieNameList[position], castList[position])
     }
 
@@ -32,7 +33,7 @@ class MovieAdapter(val movieNameList: MutableList<String>, val castList: Mutable
 
         fun bindItems(movieName: String, crewResultList: String) {
             itemView.movie_title_text.text = movieName
-            itemView.crew_result_text_view.text=crewResultList
+            itemView.crew_result_text_view.text = crewResultList
         }
     }
 }
