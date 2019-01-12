@@ -24,7 +24,7 @@ import javax.crypto.KeyGenerator
 import javax.crypto.NoSuchPaddingException
 import javax.crypto.SecretKey
 
-class MainActivity: AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     private var keyStore: KeyStore? = null
     // Variable used for storing the key in the Android Keystore container
