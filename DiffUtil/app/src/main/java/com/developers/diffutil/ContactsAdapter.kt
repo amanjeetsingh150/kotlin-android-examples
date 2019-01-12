@@ -14,7 +14,7 @@ import java.util.logging.Logger
  * Created by Amanjeet Singh on 17/1/18.
  */
 class ContactsAdapter(val context: Context,
-                      val personList: MutableList<Person>) :
+                      private val personList: MutableList<Person>) :
         RecyclerView.Adapter<ContactsAdapter.MyViewHolder>() {
 
 
@@ -26,29 +26,29 @@ class ContactsAdapter(val context: Context,
         return personList.size
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder?, position: Int) {
-        holder?.bindItems(personList[position])
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        holder.bindItems(personList[position])
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder?, position: Int, payloads: MutableList<Any>?) {
-        if (payloads?.isEmpty()!!) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int, payloads: MutableList<Any>) {
+        if (payloads.isEmpty()) {
             super.onBindViewHolder(holder, position, payloads)
         } else {
             val bundle = payloads[0] as Bundle
             for (key in bundle.keySet()) {
                 if (key == "name") {
-                    holder?.itemView?.name_text_view?.text = personList[position].name
+                    holder.itemView.name_text_view.text = personList[position].name
                 }
                 if (key == "status") {
                     log.info("Changes are ready to show")
-                    holder?.itemView?.status_text_view?.text = personList[position].status
+                    holder.itemView.status_text_view.text = personList[position].status
                 }
             }
 
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_view,
                 parent, false)
         return MyViewHolder(view)
