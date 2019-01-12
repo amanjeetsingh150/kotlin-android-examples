@@ -3,6 +3,7 @@ package com.developers.emojicompat
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.text.emoji.EmojiCompat
+import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -15,11 +16,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        ok_button.setOnClickListener({
+        ok_button.setOnClickListener {
             EmojiCompat.get().registerInitCallback(object : EmojiCompat.InitCallback() {
                 override fun onInitialized() {
                     super.onInitialized()
-                    println("EmojiCompat initialized successfully")
+                    Log.d("MainActivity", "EmojiCompat initialized successfully")
                     val processed = EmojiCompat.get().process(emojiContent)
                     emoji_text_view.text = processed
                 }
@@ -30,6 +31,6 @@ class MainActivity : AppCompatActivity() {
                             throwable?.message ?: "", Toast.LENGTH_SHORT).show()
                 }
             })
-        })
+        }
     }
 }
