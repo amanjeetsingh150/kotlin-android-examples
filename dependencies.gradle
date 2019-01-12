@@ -25,4 +25,8 @@ ankoVersion = "0.10.5"
 gmsPlayVersionMaps = "16.0.0"
 retrofitVersion = "2.3.0"
 retrofitConverterGsonVer = "2.3.0"
+roomVersion = "1.1.1"
+kotlinCoroutinesAdapterVer = "0.9.2"
+coroutinesCoreVer = "1.0.1"
+coroutinesAndroidVer = "1.0.1"
 }
