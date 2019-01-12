@@ -21,7 +21,7 @@ class MyView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
         override fun run() {
 
             if (startAngle <= 360) {
-                startAngle+=10
+                startAngle += 10
             } else {
                 startAngle = 10f
             }
