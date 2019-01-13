@@ -31,4 +31,7 @@ kotlinCoroutinesAdapterVer = "0.9.2"
 coroutinesCoreVer = "1.0.1"
 coroutinesAndroidVer = "1.0.1"
 dataBindingVer = "3.2.1"
+jacksonKotlinModuleVer = "2.9.0"
+picassoVersion = "2.5.2"
+retrofitJacksonConverter = "2.3.0"
 }
