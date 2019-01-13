@@ -11,7 +11,7 @@ import retrofit2.http.Query
 /**
  * Created by Amanjeet Singh on 10/2/18.
  */
-interface ApiInterface{
+interface ApiInterface {
     @GET("popular")
     fun getMovies(@Query("api_key") key: String,
                   @Query("page") page: Int): Call<MovieResult>
