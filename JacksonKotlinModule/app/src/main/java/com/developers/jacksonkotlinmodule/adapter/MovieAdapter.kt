@@ -18,7 +18,7 @@ import android.content.Context
 class MovieAdapter(private val context: Context, private val resultList: List<Result>?)
     : RecyclerView.Adapter<MovieAdapter.MyViewHolder>() {
 
-    override fun onBindViewHolder(holder: MyViewHolder?, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder?.bindItems(resultList?.get(position))
     }
 
@@ -26,7 +26,7 @@ class MovieAdapter(private val context: Context, private val resultList: List<Re
         return resultList?.size!!
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.list_row, parent,
                 false)
         return MyViewHolder(view)
