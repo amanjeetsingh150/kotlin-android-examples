@@ -8,11 +8,11 @@ apply plugin: 'kotlin-kapt'
 
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion compileSdkVer
     defaultConfig {
         applicationId "com.developers.mvpsample"
-        minSdkVersion 19
-        targetSdkVersion 26
+        minSdkVersion minSdkVer
+        targetSdkVersion targetSdkVer
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -31,26 +31,26 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    testImplementation 'junit:junit:4.12'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.android.support:appcompat-v7:$buildToolsVer"
+    implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+    testImplementation "junit:junit:$junitVer"
     //Dagger
-    implementation 'com.google.dagger:dagger:2.9'
-    kapt "com.google.dagger:dagger-compiler:2.9"
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    implementation 'com.android.support:recyclerview-v7:26.1.0'
-    implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVersion"
+    implementation "com.android.support:cardview-v7:$supportVer"
+    implementation "com.android.support:recyclerview-v7:$supportVer"
     //Retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitConverterGsonVer"
     //Picasso
-    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation "com.squareup.picasso:picasso:$picassoVersion"
     //Rx
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.2'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxJavaAndroidVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rxJavaRetrofitAdapterVer"
     //Support
-    implementation 'com.android.support:design:26.1.0'
+    implementation "com.android.support:design:$supportVer"
 }
