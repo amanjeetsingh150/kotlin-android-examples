@@ -1,10 +1,10 @@
 ext{
 
-kotlin_version = "1.3.11"
+kotlin_version = "1.3.20"
 constraintLayoutVersion = "1.1.3"
 compileSdkVer = 28
 targetSdkVer = 28
-androidPluginVer = "3.2.1"
+androidPluginVer = "3.3.1"
 buildToolsVer = '28.0.0'
 minSdkVer = 19
 supportVer = "28.0.0"
@@ -34,4 +34,5 @@ dataBindingVer = "3.2.1"
 jacksonKotlinModuleVer = "2.9.0"
 picassoVersion = "2.5.2"
 retrofitJacksonConverter = "2.3.0"
+kodeInVersion = "4.1.0"
 }
