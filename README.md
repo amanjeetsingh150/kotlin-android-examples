@@ -5,6 +5,18 @@ This repository contains all the example apps demonstrating features/integration
 <br><br>
 
 ### Show some :heart: and star the repo to support the project
+
+[![GitHub stars](https://img.shields.io/github/stars/amanjeetsingh150/kotlin-android-examples.svg?style=social&label=Star)](https://github.com/amanjeetsingh150/kotlin-android-examples) [![GitHub forks](https://img.shields.io/github/forks/amanjeetsingh150/kotlin-android-examples.svg?style=social&label=Fork)](https://github.com/amanjeetsingh150/kotlin-android-examples/fork) [![GitHub watchers](https://img.shields.io/github/watchers/amanjeetsingh150/kotlin-android-examples.svg?style=social&label=Watch)](https://github.com/amanjeetsingh150/kotlin-android-examples) [![GitHub followers](https://img.shields.io/github/followers/amanjeetsingh150.svg?style=social&label=Follow)](https://github.com/amanjeetsingh150/kotlin-android-examples)  
+[![Twitter Follow](https://img.shields.io/twitter/follow/droid_singh.svg?style=social)](https://twitter.com/droid_singh)
+
+
+> NOTE: If you are going to download just a single example app (using the download link), make sure you follow the below procedure
+> 1. Create a folder `kotlin-android-examples`
+> 1. Next download and add the [`dependencies.gradle`](/dependencies.gradle) to this `kotlin-android-examples` folder
+> 1. Now move the example app folder inside the `android-examples` folder
+>
+> The reason this is required because each single app uses `ext` variables defined and referenced from `dependencies.gradle` file from the parent folder namely `kotlin-android-examples`.
+
 <h2>Examples</h2>
 <ol>
 <li><a href="/ActivityLifecycle">ActivityLifecycle</a> <a href="https://kinolien.github.com/gitzip/?download=https://github.com/amanjeetsingh150/kotlin-android-examples/tree/master/ActivityLifecycle"><img src="ic_download.png" alt="download" style="max-width:100%;"></a></li>
