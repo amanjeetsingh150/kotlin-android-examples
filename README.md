@@ -13,7 +13,7 @@ This repository contains all the example apps demonstrating features/integration
 > NOTE: If you are going to download just a single example app (using the download link), make sure you follow the below procedure
 > 1. Create a folder `kotlin-android-examples`
 > 1. Next download and add the [`dependencies.gradle`](/dependencies.gradle) to this `kotlin-android-examples` folder
-> 1. Now move the example app folder inside the `android-examples` folder
+> 1. Now move the example app folder inside the `kotlin-android-examples` folder
 >
 > The reason this is required because each single app uses `ext` variables defined and referenced from `dependencies.gradle` file from the parent folder namely `kotlin-android-examples`.
 
@@ -63,6 +63,7 @@ This repository contains all the example apps demonstrating features/integration
 <li><a href="/HandlerThread">HandlerThread</a> <a href="https://kinolien.github.com/gitzip/?download=https://github.com/amanjeetsingh150/kotlin-android-examples/tree/master/HandlerThread"><img src="ic_download.png" alt="download" style="max-width:100%;"></a></li>
 <li><a href="/MobileVisionBarCode">MobileVisionBarCode</a> <a href="https://kinolien.github.com/gitzip/?download=https://github.com/amanjeetsingh150/kotlin-android-examples/tree/master/MobileVisionBarCode"><img src="ic_download.png" alt="download" style="max-width:100%;"></a></li>
 <li><a href="/FingerprintAPI">FingerprintAPI</a> <a href="https://kinolien.github.com/gitzip/?download=https://github.com/amanjeetsingh150/kotlin-android-examples/tree/master/FingerprintAPI"><img src="ic_download.png" alt="download" style="max-width:100%;"></a></li>
+<li><a href="/WidgetExample">WidgetExample</a> <a href="https://kinolien.github.com/gitzip/?download=https://github.com/amanjeetsingh150/kotlin-android-examples/tree/master/WidgetExample"><img src="ic_download.png" alt="download" style="max-width:100%;"></a></li>
 </ol>
 <br><br>
 <h2>Pull Requests</h2>
