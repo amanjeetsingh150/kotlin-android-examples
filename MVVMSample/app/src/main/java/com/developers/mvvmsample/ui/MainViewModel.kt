@@ -28,7 +28,7 @@ class MainViewModel @Inject constructor(private var dataManager: DataManager,
         return dataManager.searchMovieQuery(BuildConfig.MOVIE_KEY, query)
                 .subscribeOn(schedulerProvider.io())
                 .observeOn(schedulerProvider.ui())
-                .map({ result -> result.results })
+                .map { result -> result.results }
     }
 
     fun isValidQuery(query: String): Boolean {

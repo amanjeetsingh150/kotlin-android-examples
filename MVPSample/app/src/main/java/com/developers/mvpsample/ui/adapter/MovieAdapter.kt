@@ -19,12 +19,11 @@ import java.util.logging.Logger
 class MovieAdapter(private val movieList: List<Result>, val context: Context) :
         RecyclerView.Adapter<MovieAdapter.MyViewHolder>() {
 
-
     companion object {
         val log = Logger.getLogger(MovieAdapter::class.java.name)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val v = LayoutInflater.from(context).inflate(R.layout.list_row_movie,
                 parent, false)
         return MyViewHolder(v)
@@ -34,13 +33,13 @@ class MovieAdapter(private val movieList: List<Result>, val context: Context) :
         return movieList.size
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder?, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val title = movieList[position].title
         val imagePath = movieList[position].backdropPath
         log.info(title)
         val url = Uri.parse("http://image.tmdb.org/t/p/w185")
                 .buildUpon().appendEncodedPath(imagePath).build()
-        holder?.bindItems(url = url.toString(), title = title)
+        holder.bindItems(url = url.toString(), title = title)
     }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

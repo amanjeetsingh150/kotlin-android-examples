@@ -4,7 +4,6 @@ import android.app.Application
 import android.content.Context
 import com.developers.mvvmsample.di.components.AppComponent
 import com.developers.mvvmsample.di.components.DaggerAppComponent
-import com.developers.mvvmsample.di.modules.ActivityModule
 import com.developers.mvvmsample.di.modules.AppModule
 import com.developers.mvvmsample.di.modules.NetModule
 

@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                 .activityModule(ActivityModule(SchedulerProvider()))
                 .build()
         activityComponent.inject(this)
-        search_button.setOnClickListener({
+        search_button.setOnClickListener {
             hideKeyboard()
             val query = query_edit_text.text.toString()
             if (mainViewModel.isValidQuery(query)) {
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
                 Snackbar.make(layout_main,
                         "Not a valid Query", Snackbar.LENGTH_SHORT).show()
             }
-        })
+        }
     }
 
     override fun onResume() {
