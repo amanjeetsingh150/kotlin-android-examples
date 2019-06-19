@@ -1,8 +1,8 @@
 package com.developers.emojicompat
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.text.emoji.EmojiCompat
+import androidx.emoji.text.EmojiCompat
 import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*

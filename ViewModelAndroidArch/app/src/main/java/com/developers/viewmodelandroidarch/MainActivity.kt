@@ -1,7 +1,7 @@
 package com.developers.viewmodelandroidarch
 
-import android.arch.lifecycle.ViewModelProviders
-import android.support.v7.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProviders
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.developers.viewmodelandroidarch.model.BeyBlade
 import kotlinx.android.synthetic.main.activity_main.*

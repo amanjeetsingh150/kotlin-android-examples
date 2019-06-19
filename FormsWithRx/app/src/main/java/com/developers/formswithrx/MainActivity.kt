@@ -2,7 +2,7 @@ package com.developers.formswithrx
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 import com.jakewharton.rxbinding2.widget.textChangeEvents
 import io.reactivex.Observable

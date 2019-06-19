@@ -1,11 +1,11 @@
 package com.developers.handlerthread
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Message
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.raywenderlich.mcwenderlich.FoodRunnable
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.ref.WeakReference

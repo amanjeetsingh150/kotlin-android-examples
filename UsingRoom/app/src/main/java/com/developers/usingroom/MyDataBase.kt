@@ -1,7 +1,7 @@
 package com.developers.usingroom
 
-import android.arch.persistence.room.Database
-import android.arch.persistence.room.RoomDatabase
+import androidx.room.Database
+import androidx.room.RoomDatabase
 
 /**
  * Created by Amanjeet Singh on 14/11/17.

@@ -1,10 +1,10 @@
 package com.developers.mvvmsample.ui
 
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.widget.LinearLayoutManager
+import com.google.android.material.snackbar.Snackbar
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.View
 import com.developers.mvvmsample.InitApp
 import com.developers.mvvmsample.R

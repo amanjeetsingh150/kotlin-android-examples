@@ -1,7 +1,7 @@
 package com.developers.kodein
 
 import android.os.Bundle
-import android.support.v7.widget.GridLayoutManager
+import androidx.gridlayout.widget.GridLayoutManager
 import com.developers.kodein.adapter.MovieAdapter
 import com.github.salomonbrys.kodein.android.KodeinAppCompatActivity
 import com.github.salomonbrys.kodein.instance

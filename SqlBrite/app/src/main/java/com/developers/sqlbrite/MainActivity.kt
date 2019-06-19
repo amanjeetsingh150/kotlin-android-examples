@@ -2,7 +2,7 @@ package com.developers.sqlbrite
 
 import android.content.ContentValues
 import android.database.sqlite.SQLiteDatabase
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.developers.sqlbrite.db.RepoDB
 import com.squareup.sqlbrite3.BriteDatabase

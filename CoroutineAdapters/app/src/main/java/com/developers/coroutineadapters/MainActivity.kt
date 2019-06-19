@@ -1,8 +1,8 @@
 package com.developers.coroutineadapters
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.View
 import com.developers.coroutineadapters.model.MovieResult
 import com.developers.coroutineadapters.model.Result
@@ -15,7 +15,7 @@ import java.util.logging.Logger
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var apiInterface: ApiInterface
+    private lateinit var apiInterface: ApiInterface
     private var nameList = mutableListOf<String>()
     private var castList = mutableListOf<String>()
 

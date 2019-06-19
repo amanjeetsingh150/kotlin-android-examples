@@ -3,13 +3,15 @@ package com.developers.circularreveals
 import android.content.res.ColorStateList
 import android.opengl.Visibility
 import android.os.Build
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.content.res.ResourcesCompat
+import androidx.core.content.res.ResourcesCompat
 import android.view.View
 import android.view.ViewAnimationUtils
 import kotlinx.android.synthetic.main.activity_main.*
 import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
+import kotlin.math.hypot
 
 
 class MainActivity : AppCompatActivity() {
@@ -30,7 +32,7 @@ class MainActivity : AppCompatActivity() {
             val y = main_layout.bottom
 
             val startRadius = 0
-            val endRadius = Math.hypot(main_layout.width.toDouble(), main_layout.height.toDouble())
+            val endRadius = hypot(main_layout.width.toDouble(), main_layout.height.toDouble())
 
             floating_button.backgroundTintList = ColorStateList.valueOf(ResourcesCompat
                     .getColor(applicationContext.resources, android.R.color.white, null))
@@ -54,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             val y = layout_text.top
 
             val startRadius = 0
-            val end = Math.hypot(main_layout.width.toDouble(), main_layout.height.toDouble())
+            val end = hypot(main_layout.width.toDouble(), main_layout.height.toDouble())
 
             floating_button.backgroundTintList = ColorStateList.valueOf(ResourcesCompat
                     .getColor(applicationContext.resources, R.color.colorPrimary, null))
@@ -65,21 +67,10 @@ class MainActivity : AppCompatActivity() {
                 //duration can be custom according to you even can be left and default value will be taken
                 //in ms
                 anim.duration=800
-                anim.addListener(object : Animator.AnimatorListener {
-                    override fun onAnimationStart(animator: Animator) {
-
-                    }
-
-                    override fun onAnimationEnd(animator: Animator) {
+                anim.addListener(object : AnimatorListenerAdapter(){
+                    override fun onAnimationEnd(animation: Animator?) {
+                        super.onAnimationEnd(animation)
                         menu_layout.visibility = View.GONE
-                    }
-
-                    override fun onAnimationCancel(animator: Animator) {
-
-                    }
-
-                    override fun onAnimationRepeat(animator: Animator) {
-
                     }
                 })
                 anim.start()
