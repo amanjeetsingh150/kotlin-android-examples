@@ -1,6 +1,6 @@
 package com.developers.coroutineadapters
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +15,7 @@ class MovieAdapter(private val movieNameList: MutableList<String>,
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = LayoutInflater.from(parent?.context).inflate(R.layout.list_row, parent,
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_row, parent,
                 false)
         return MyViewHolder(view)
     }
@@ -25,7 +25,7 @@ class MovieAdapter(private val movieNameList: MutableList<String>,
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder?.bindItems(movieNameList[position], castList[position])
+        holder.bindItems(movieNameList[position], castList[position])
     }
 
 

@@ -1,11 +1,9 @@
 package com.developers.mvpsample.ui.main
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.support.design.widget.Snackbar
-import android.support.v7.widget.LinearLayoutManager
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.developers.mvpsample.BuildConfig
 import com.developers.mvpsample.InitApp
 import com.developers.mvpsample.R
@@ -13,6 +11,7 @@ import com.developers.mvpsample.data.Result
 import com.developers.mvpsample.di.component.DaggerActivityComponent
 import com.developers.mvpsample.di.module.ActivityModule
 import com.developers.mvpsample.ui.adapter.MovieAdapter
+import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,14 +23,9 @@ class MainActivity : AppCompatActivity(), MainView {
 
     @Inject
     lateinit var mainPresenter: MainMvpPresenter<MainView>
-    var resultJSON: String? = null
+    private var resultJSON: String? = null
     private val RESULT = "resultJson"
     private val gson = Gson()
-
-
-    companion object {
-        val log = Logger.getLogger(MainActivity::class.java.name)
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,10 +66,10 @@ class MainActivity : AppCompatActivity(), MainView {
     }
 
     private fun setListeners() {
-        search_button.setOnClickListener({
+        search_button.setOnClickListener {
             mainPresenter.searchMovieQuery(query_edit_text.text.toString()
                     , BuildConfig.MOVIE_KEY)
-        })
+        }
     }
 
     override fun onDestroy() {

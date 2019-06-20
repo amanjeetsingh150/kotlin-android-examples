@@ -1,6 +1,6 @@
 package com.developers.koin.main
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.developers.koin.R
@@ -16,9 +16,9 @@ class MainActivity : AppCompatActivity(), MainView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         presenter.attachView(this)
-        hello_button.setOnClickListener({
+        hello_button.setOnClickListener {
             presenter.showMessage()
-        })
+        }
     }
 
     override fun showError(error: String) {

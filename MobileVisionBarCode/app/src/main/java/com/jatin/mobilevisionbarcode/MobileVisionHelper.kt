@@ -3,7 +3,7 @@ package com.jatin.mobilevisionbarcode
 import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
-import android.support.v4.app.ActivityCompat
+import androidx.core.app.ActivityCompat
 import android.util.Log
 import android.view.SurfaceHolder
 import android.view.SurfaceView

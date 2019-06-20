@@ -1,18 +1,20 @@
 ext{
 
-kotlin_version = "1.3.20"
+kotlin_version = "1.3.40"
 constraintLayoutVersion = "1.1.3"
 compileSdkVer = 28
 targetSdkVer = 28
 androidPluginVer = "3.3.1"
-buildToolsVer = '28.0.0'
+buildToolsVer = "1.0.2"
 minSdkVer = 19
-supportVer = "28.0.0"
+supportVer = "1.0.0"
+coreKtxVersion = "1.0.2"
+designVersion= "1.0.0"
 
 //Test dependencies
 junitVer = "4.12"
-androidTestRunnerVer = "1.0.2"
-espressoCoreVersion = "3.0.2"
+androidTestRunnerVer = "1.1.0"
+espressoCoreVersion = "3.1.0"
 
 //Rx
 rxJavaAndroidVersion = "2.1.0"
@@ -23,7 +25,7 @@ rxAdapterRetrofitVer = "2.3.0"
 
 apolloPluginVersion = "0.3.2"
 ankoVersion = "0.10.5"
-gmsPlayVersionMaps = "16.0.0"
+gmsPlayVersionMaps = "17.0.0"
 retrofitVersion = "2.3.0"
 retrofitConverterGsonVer = "2.3.0"
 roomVersion = "1.1.1"
@@ -37,14 +39,13 @@ retrofitJacksonConverter = "2.3.0"
 kodeInVersion = "4.1.0"
 koinVersion = "0.8.2"
 kotlinTestVersion = "2.0.7"
-googlePlayServicesVer = "15.0.0"
+googlePlayServicesVer = "18.0.0"
 moshiVersion = "1.5.0"
 moshiRetrofitConverterVer  = "2.0.0"
 daggerVersion = "2.9"
 realmVersion = "4.3.0"
-timberVersion = "4.6.0"
+timberVersion = "4.7.1"
 firebaseJobDispatcherVer = "0.7.0"
-roomVersion = "1.0.0"
 sugarVersion = "1.5"
-archComponentsVersion = "1.1.0"
+archComponentsVersion = "1.1.1"
 }

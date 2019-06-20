@@ -1,8 +1,8 @@
 package com.developers.jacksonkotlinmodule
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.GridLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import com.developers.jacksonkotlinmodule.adapter.MovieAdapter
 import com.developers.jacksonkotlinmodule.model.MovieResult
 import kotlinx.android.synthetic.main.activity_main.*
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
                     override fun onResponse(call: Call<MovieResult>?, response: Response<MovieResult>?) {
                         Log.info(response?.body()?.results!![0].posterPath + " ")
-                        val movieResponse = response?.body()
+                        val movieResponse = response.body()
                         val resultList = movieResponse?.results
                         val layoutManager = GridLayoutManager(applicationContext, 2)
                         val adapter = MovieAdapter(applicationContext, resultList)

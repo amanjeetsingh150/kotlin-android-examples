@@ -26,12 +26,12 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation "com.android.support:appcompat-v7:$buildToolsVer"
-    implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
-    implementation "com.android.support:design:$supportVer"
+    implementation "androidx.appcompat:appcompat:$buildToolsVer"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "com.google.android.material:material:$designVersion"
     testImplementation "junit:junit:$junitVer"
-    androidTestImplementation "com.android.support.test:runner:$androidTestRunnerVer"
-    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVersion"
+    androidTestImplementation "androidx.test:runner:$androidTestRunnerVer"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVersion"
 
     
     implementation "android.arch.lifecycle:runtime:$archComponentsVersion"

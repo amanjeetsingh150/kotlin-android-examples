@@ -1,5 +1,5 @@
 package com.developers.moshiexample.model
-import android.support.annotation.Nullable
+import androidx.annotation.Nullable
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonQualifier
 

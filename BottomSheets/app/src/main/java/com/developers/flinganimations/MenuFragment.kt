@@ -2,11 +2,11 @@ package com.developers.flinganimations
 
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.widget.GridLayoutManager
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.fragment_menu.view.*
 
 
@@ -37,7 +37,7 @@ class MenuFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        val v = inflater!!.inflate(R.layout.fragment_menu, container, false)
+        val v = inflater.inflate(R.layout.fragment_menu, container, false)
         when (pos) {
             "0" -> {
                 val imageList = listOf<Int>(R.drawable.ic_local_gas_station_grey_700_24dp,

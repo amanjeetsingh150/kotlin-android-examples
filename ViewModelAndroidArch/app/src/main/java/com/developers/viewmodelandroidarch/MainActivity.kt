@@ -1,7 +1,7 @@
 package com.developers.viewmodelandroidarch
 
-import android.arch.lifecycle.ViewModelProviders
-import android.support.v7.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProviders
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.developers.viewmodelandroidarch.model.BeyBlade
 import kotlinx.android.synthetic.main.activity_main.*
@@ -17,11 +17,11 @@ class MainActivity : AppCompatActivity() {
         if (beyBlade.bitBeast != null || beyBlade.beyBladeOwner != null) {
             displayInfo(beyBlade)
         }
-        show_button.setOnClickListener({
+        show_button.setOnClickListener {
             beyBlade.beyBladeOwner = owner_name_edittext.text.toString()
             beyBlade.bitBeast = bitbeast_name_edittext.text.toString()
             displayInfo(beyBlade)
-        })
+        }
     }
 
     private fun displayInfo(beyBlade: BeyBlade) {

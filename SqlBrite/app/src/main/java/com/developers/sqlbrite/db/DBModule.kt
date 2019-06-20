@@ -1,14 +1,14 @@
 package com.developers.sqlbrite.db
 
 import android.app.Application
-import android.arch.persistence.db.SupportSQLiteOpenHelper
+import androidx.sqlite.db.SupportSQLiteOpenHelper
 import com.squareup.sqlbrite3.BriteDatabase
 import com.squareup.sqlbrite3.SqlBrite
 import dagger.Module
 import dagger.Provides
 import java.util.logging.Logger
 import javax.inject.Singleton
-import android.arch.persistence.db.framework.FrameworkSQLiteOpenHelperFactory
+import androidx.sqlite.db.framework.FrameworkSQLiteOpenHelperFactory
 import io.reactivex.schedulers.Schedulers
 
 

@@ -1,7 +1,7 @@
 package com.developers.usingdagger2.main
 
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.developers.usingdagger2.InitApplication
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity(), MainView {
 
     override fun showMessage(message: String) {
         toast(message)
-        main_text_view.text = "Hey " + message
+        main_text_view.text = "Hey $message"
     }
 
     override fun showLoading() {

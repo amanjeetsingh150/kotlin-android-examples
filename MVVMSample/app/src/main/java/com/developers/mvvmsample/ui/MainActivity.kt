@@ -1,10 +1,10 @@
 package com.developers.mvvmsample.ui
 
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.widget.LinearLayoutManager
+import com.google.android.material.snackbar.Snackbar
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.View
 import com.developers.mvvmsample.InitApp
 import com.developers.mvvmsample.R
@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.logging.Logger
 import javax.inject.Inject
 import android.view.inputmethod.InputMethodManager
+import androidx.recyclerview.widget.RecyclerView
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 
@@ -95,7 +96,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showList(result: List<Result>) {
         val linearLayoutManager = LinearLayoutManager(applicationContext)
-        linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
+        linearLayoutManager.orientation = RecyclerView.VERTICAL
         val movieAdapter = MovieAdapter(result, applicationContext)
         with(movie_recycler_view) {
             layoutManager = linearLayoutManager

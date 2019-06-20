@@ -3,12 +3,12 @@ package com.developers.contentproviders
 
 import android.content.ContentValues
 import android.database.Cursor
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.LoaderManager
-import android.support.v4.content.CursorLoader
-import android.support.v4.content.Loader
-import android.support.v7.widget.LinearLayoutManager
+import androidx.loader.app.LoaderManager
+import androidx.loader.content.CursorLoader
+import androidx.loader.content.Loader
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.developers.contentproviders.adapter.VillainAdapter
 import com.developers.contentproviders.data.Villains
 import kotlinx.android.synthetic.main.activity_main.*

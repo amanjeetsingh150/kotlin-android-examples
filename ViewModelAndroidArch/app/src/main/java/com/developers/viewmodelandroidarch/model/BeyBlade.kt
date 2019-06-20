@@ -1,6 +1,6 @@
 package com.developers.viewmodelandroidarch.model
 
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.ViewModel
 
 /**
  * Created by Amanjeet Singh on 8/2/18.
