@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity(), MainView {
 
     override fun showMessage(message: String) {
         toast(message)
-        main_text_view.text = "Hey " + message
+        main_text_view.text = "Hey $message"
     }
 
     override fun showLoading() {

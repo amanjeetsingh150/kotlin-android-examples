@@ -14,13 +14,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         emailValidator = EmailValidator()
         edit_text_email.addTextChangedListener(emailValidator)
-        validate_button.setOnClickListener({
+        validate_button.setOnClickListener {
             if (emailValidator.isValid()) {
                 toast("Valid Mail", Toast.LENGTH_SHORT)
             } else {
                 toast("Access Denied. Invalid Mail!!", Toast.LENGTH_SHORT)
             }
-        })
+        }
 
     }
 }

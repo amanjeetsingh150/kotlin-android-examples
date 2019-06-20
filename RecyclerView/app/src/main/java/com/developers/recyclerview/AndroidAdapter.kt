@@ -11,18 +11,18 @@ import kotlinx.android.synthetic.main.list_row_item.view.*
 /**
  * Created by Amanjeet Singh on 13/11/17.
  */
-class MyAdapter(val myAndroidOsList: List<String>, val context: Context) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class MyAdapter(private val myAndroidOsList: List<String>, private val context: Context) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
 
     override fun getItemCount(): Int {
         return myAndroidOsList.size
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder?, position: Int) {
-        holder?.bindItems(myAndroidOsList[position])
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        holder.bindItems(myAndroidOsList[position])
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val v = LayoutInflater.from(context).inflate(R.layout.list_row_item,
                 parent, false)
         return MyViewHolder(v)

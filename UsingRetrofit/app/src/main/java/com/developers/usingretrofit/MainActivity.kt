@@ -3,8 +3,8 @@ package com.developers.usingretrofit
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.gridlayout.widget.GridLayoutManager
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import com.developers.usingretrofit.adapter.MovieAdapter
 import com.developers.usingretrofit.model.MovieResult
 import kotlinx.android.synthetic.main.activity_main.*

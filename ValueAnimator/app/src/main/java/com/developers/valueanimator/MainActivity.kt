@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        animate_button.setOnClickListener({
+        animate_button.setOnClickListener {
             val valueAnimator = ValueAnimator.ofFloat(textView.textSize, endValue.toFloat())
             valueAnimator.duration = 600
             valueAnimator.addUpdateListener {
@@ -21,6 +21,6 @@ class MainActivity : AppCompatActivity() {
                 textView.textSize = animatedValue
             }
             valueAnimator.start()
-        })
+        }
     }
 }

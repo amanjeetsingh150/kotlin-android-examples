@@ -17,11 +17,11 @@ class MainActivity : AppCompatActivity() {
         if (beyBlade.bitBeast != null || beyBlade.beyBladeOwner != null) {
             displayInfo(beyBlade)
         }
-        show_button.setOnClickListener({
+        show_button.setOnClickListener {
             beyBlade.beyBladeOwner = owner_name_edittext.text.toString()
             beyBlade.bitBeast = bitbeast_name_edittext.text.toString()
             displayInfo(beyBlade)
-        })
+        }
     }
 
     private fun displayInfo(beyBlade: BeyBlade) {

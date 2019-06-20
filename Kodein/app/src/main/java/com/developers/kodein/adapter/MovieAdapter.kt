@@ -15,17 +15,18 @@ import kotlinx.android.synthetic.main.list_row.view.*
 /**
  * Created by Amanjeet Singh on 25/1/18.
  */
-class MovieAdapter(val context: Context, val resultList: List<Result>?) : RecyclerView.Adapter<MovieAdapter.MyViewHolder>() {
+class MovieAdapter(private val context: Context,
+                   private val resultList: List<Result>?) : RecyclerView.Adapter<MovieAdapter.MyViewHolder>() {
 
-    override fun onBindViewHolder(holder: MyViewHolder?, position: Int) {
-        holder?.bindItems(resultList?.get(position))
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+        holder.bindItems(resultList?.get(position))
     }
 
     override fun getItemCount(): Int {
         return resultList?.size!!
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.list_row,
                 parent, false)
         return MyViewHolder(view)

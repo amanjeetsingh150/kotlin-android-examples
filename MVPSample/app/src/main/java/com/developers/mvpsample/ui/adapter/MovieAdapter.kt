@@ -53,7 +53,7 @@ class MovieAdapter(private val movieList: List<Result>, val context: Context) :
                         }
 
                         override fun onError() {
-
+                            // Error showing
                         }
 
                     })

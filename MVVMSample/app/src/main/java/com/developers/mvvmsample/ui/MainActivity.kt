@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.logging.Logger
 import javax.inject.Inject
 import android.view.inputmethod.InputMethodManager
+import androidx.recyclerview.widget.RecyclerView
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 
@@ -95,7 +96,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showList(result: List<Result>) {
         val linearLayoutManager = LinearLayoutManager(applicationContext)
-        linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
+        linearLayoutManager.orientation = RecyclerView.VERTICAL
         val movieAdapter = MovieAdapter(result, applicationContext)
         with(movie_recycler_view) {
             layoutManager = linearLayoutManager

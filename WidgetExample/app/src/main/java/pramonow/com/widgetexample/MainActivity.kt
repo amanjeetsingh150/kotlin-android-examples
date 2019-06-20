@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         intent.action = "ACTIVITY_ACTION"
 
         //This action will send broadcast to update the widget
-        button.setOnClickListener { View ->
+        button.setOnClickListener { _ ->
             AppWidgetManager.getInstance(application).getAppWidgetIds(ComponentName(application,SampleWidget::class.java))
             intent.putExtra("name", editText.text.toString())
             sendBroadcast(intent)}

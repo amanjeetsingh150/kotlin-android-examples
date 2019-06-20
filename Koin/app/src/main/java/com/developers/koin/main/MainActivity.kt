@@ -16,9 +16,9 @@ class MainActivity : AppCompatActivity(), MainView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         presenter.attachView(this)
-        hello_button.setOnClickListener({
+        hello_button.setOnClickListener {
             presenter.showMessage()
-        })
+        }
     }
 
     override fun showError(error: String) {
