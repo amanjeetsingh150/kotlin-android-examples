@@ -65,7 +65,8 @@ This repository contains all the example apps demonstrating features/integration
 <li><a href="/FingerprintAPI">FingerprintAPI</a> <a href="https://kinolien.github.com/gitzip/?download=https://github.com/amanjeetsingh150/kotlin-android-examples/tree/master/FingerprintAPI"><img src="ic_download.png" alt="download" style="max-width:100%;"></a></li>
 <li><a href="/WidgetExample">WidgetExample</a> <a href="https://kinolien.github.com/gitzip/?download=https://github.com/amanjeetsingh150/kotlin-android-examples/tree/master/WidgetExample"><img src="ic_download.png" alt="download" style="max-width:100%;"></a></li>
 <li><a href="/JniSample">JniSample</a> <a href="https://kinolien.github.com/gitzip/?download=https://github.com/amanjeetsingh150/kotlin-android-examples/tree/master/JniSample"><img src="ic_download.png" alt="download" style="max-width:100%;"></a></li>
-<li><a href="/AnimatedVectorDrawble">AnimatedVectorDrawble</a> <a href="https://kinolien.github.com/gitzip/?download=https://github.com/amanjeetsingh150/kotlin-android-examples/tree/master/AnimatedVectorDrawble"><img src="ic_download.png" alt="download" style="max-width:100%;"></a></li>  
+<li><a href="/AnimatedVectorDrawble">AnimatedVectorDrawble</a> <a href="https://kinolien.github.com/gitzip/?download=https://github.com/amanjeetsingh150/kotlin-android-examples/tree/master/AnimatedVectorDrawble"><img src="ic_download.png" alt="download" style="max-width:100%;"></a></li>
+<li><a href="/ListAdapter">ListAdapter</a> <a href="https://kinolien.github.com/gitzip/?download=https://github.com/amanjeetsingh150/kotlin-android-examples/tree/master/ListAdapter"><img src="ic_download.png" alt="download" style="max-width:100%;"></a></li>  
 </ol>
 <br><br>
 <h2>Pull Requests</h2>
