@@ -29,8 +29,6 @@ class MovieDataSource(private val coroutineScope: CoroutineScope) :
                 apiInterface.getPopularMovies(key = BuildConfig.MOVIES_KEY, page = 1)
             state.value = State.DONE
             callback.onResult(moviesResponse.results, null, 2)
-        }.invokeOnCompletion {
-
         }
     }
 
@@ -44,8 +42,6 @@ class MovieDataSource(private val coroutineScope: CoroutineScope) :
             val nextKey = params.key + 1
             state.value = State.DONE
             callback.onResult(moviesResponse.results, nextKey)
-        }.invokeOnCompletion {
-
         }
     }
 
