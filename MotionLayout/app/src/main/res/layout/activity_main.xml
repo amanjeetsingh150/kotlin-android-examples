@@ -1,0 +1,21 @@
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    app:layoutDescription="@xml/card_motion_scene">
+
+    <FrameLayout
+        android:id="@+id/bottomCard"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        android:layout_width="0dp"/>
+
+    <FrameLayout
+        android:id="@+id/topCard"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:background="@color/colorAccent"/>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
