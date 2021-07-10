@@ -2,9 +2,12 @@ apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 
-apply plugin: 'kotlin-android-extensions'
 
 android {
+    buildFeatures {
+        viewBinding true
+    }
+
     compileSdkVersion compileSdkVer
     defaultConfig {
         applicationId "com.developers.usingretrofit"
@@ -21,7 +24,7 @@ android {
         }
     }
     buildTypes.each {
-        it.buildConfigField('String', "TV_KEY", API_KEY)
+        it.buildConfigField('String', "TV_KEY", "\"API_KEY\"")
     }
 }
 
@@ -38,7 +41,7 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofitConverterGsonVer"
 
     implementation "androidx.recyclerview:recyclerview:$supportVer"
-    implementation "androidx.cardview:cardview:$supportVer"
+    implementation "androidx.cardview:cardview:1.0.0"
 
     implementation "com.squareup.picasso:picasso:$picassoVersion"
 }

@@ -1,11 +1,11 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    apply from: '../dependencies.gradle'
+    apply from: rootProject.projectDir.absolutePath + '/dependencies.gradle'
 
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$androidPluginVer"
@@ -19,12 +19,12 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 }
 
 subprojects {
-    apply from: '../../dependencies.gradle'
+    apply from: rootProject.projectDir.absolutePath + '/dependencies.gradle'
 }
 
 task clean(type: Delete) {

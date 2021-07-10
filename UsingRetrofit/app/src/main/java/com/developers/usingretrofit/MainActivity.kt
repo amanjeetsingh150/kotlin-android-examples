@@ -1,25 +1,31 @@
 package com.developers.usingretrofit
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
+import com.developers.usingretrofit.BuildConfig.TV_KEY
 import com.developers.usingretrofit.adapter.MovieAdapter
+import com.developers.usingretrofit.databinding.ActivityMainBinding
 import com.developers.usingretrofit.model.MovieResult
-import kotlinx.android.synthetic.main.activity_main.*
+import com.developers.usingretrofit.utils.lazyUI
+import com.developers.usingretrofit.utils.showMessage
+import com.developers.usingretrofit.utils.viewBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
 
+    private val binding by viewBinding(ActivityMainBinding::inflate)
+
+    private val apiCall by lazyUI(ApiInterface::create)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val apiCall = ApiInterface.create()
-        apiCall.getMovies(BuildConfig.TV_KEY, 1).enqueue(object : Callback<MovieResult> {
+
+        apiCall.getMovies(TV_KEY, 1).enqueue(object : Callback<MovieResult> {
             override fun onFailure(call: Call<MovieResult>?, t: Throwable?) {
                 showError(t?.message)
             }
@@ -36,11 +42,6 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private fun showError(message: String?) {
-        toast(message.toString())
-    }
-
-    fun Context.toast(msg: String) {
-        Toast.makeText(applicationContext, msg, Toast.LENGTH_SHORT).show()
-    }
+    private fun showError(message: String?) =
+        showMessage(message.toString())
 }
